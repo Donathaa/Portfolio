@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Uyisabye Donatha — Portfolio</title>
+  <style>
+    :root{
+      --bg:#fdf4f4; /* very light rouge background */
+      --accent:#800020; /* Rouge Bordeaux */
+      --text:#3a3a3a;
+      --muted:#777;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Segoe UI', Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    /* Header */
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 6%;
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:10;
+      background:rgba(128,0,32,0.9);
+    }
+    header .logo img{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+      border:3px solid #fff;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    nav a{
+      margin-left:18px;
+      text-decoration:none;
+      color:#fff;
+      font-size:15px;
+      transition:0.3s;
+    }
+    nav a:hover{color:#ffdede}
+    .contact-btn{
+      background:#fff;
+      color:var(--accent);
+      padding:7px 14px;
+      border-radius:6px;
+      font-weight:600;
+      margin-left:18px;
+      white-space:nowrap;
+    }
+
+    /* Hero */
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 8%;
+      min-height:100vh;
+      background:linear-gradient(90deg,rgba(253,244,244,0.95) 60%, transparent),
+                 url('donatha-bg.jpg') right/cover no-repeat;
+    }
+    .hero-text{max-width:500px;}
+    .hero-text h4{
+      color:var(--accent);
+      letter-spacing:2px;
+      font-size:14px;
+      margin-bottom:10px;
+    }
+    .hero-text h1{
+      font-size:42px;
+      line-height:1.2;
+      margin-bottom:20px;
+    }
+    .hero-text p{
+      color:var(--muted);
+      margin-bottom:20px;
+      font-size:15px;
+    }
+    .hero-text .btn{
+      display:inline-block;
+      background:var(--accent);
+      color:#fff;
+      padding:10px 20px;
+      border-radius:6px;
+      font-weight:600;
+      text-decoration:none;
+    }
+
+    /* Sections */
+    section{padding:60px 8%;}
+    .about,.skills,.contact,.projects{margin-top:40px;}
+    h2{margin-bottom:20px;color:var(--accent);}
+    .skills-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .skill{
+      background:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      font-size:14px;
+      color:var(--accent);
+      font-weight:500;
+    }
+    .project-card{
+      background:#fff;
+      padding:20px;
+      margin-bottom:15px;
+      border-radius:10px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project-card h3{color:var(--accent); margin-bottom:10px;}
+
+    /* Footer */
+    footer{
+      text-align:center;
+      padding:20px 8%;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    @media(max-width: 900px){
+      .hero{flex-direction:column; text-align:center; padding-top:100px;}
+      .hero-text{max-width:100%;}
+    }
+    @media(max-width: 700px){
+      header{flex-direction:column; align-items:flex-start;}
+      nav{margin-top:10px; flex-wrap:wrap;}
+      nav a, .contact-btn{margin:8px 8px 0 0; font-size:14px;}
+    }
+    @media(max-width: 500px){
+      .hero-text h1{font-size:28px;}
+      .hero-text p{font-size:14px;}
+      header .logo img{width:90px; height:90px;}
+      section{padding:40px 6%;}
+      .skills-list{gap:8px;}
+      .skill{font-size:13px; padding:8px 12px;}
+    }
+  </style>
+</head>
+<body>
+ <header>
+  <div class="logo">
+    <img src="profile.jpg" alt="Profile Picture" />
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="Donatha_CV.pdf" class="contact-btn" download>Download CV</a>
+  </nav>
+</header>
+
+  <section class="hero" id="home">
+    <div class="hero-text"><br><br><br>
+      <h4>NETWORKS & COMMUNICATION SYSTEM STUDENT</h4>
+      <h1>I'm <br> Uyisabye Donatha</h1>
+      <p>Motivated final-year IT student at AUCA, specializing in Networks and Communication Systems. Passionate about web development, Java programming, and problem-solving. Committed to applying academic knowledge to real-world challenges and contributing to organizational success.</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I am an enthusiastic undergraduate at Adventist University of Central Africa (AUCA), pursuing a Bachelor’s in Networks and Communication Systems (Expected 2027). I hold an Advanced Level Certificate in Mathematics, Economics, and Computer Science. With strong foundations in IT, I strive to grow through hands-on projects, internships, and teamwork while contributing to Rwanda’s digital transformation.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="skills-list">
+      <div class="skill">Java</div>
+      <div class="skill">C Programming</div>
+      <div class="skill">Web Development</div>
+      <div class="skill">MS Office</div>
+      <div class="skill">Teamwork</div>
+      <div class="skill">Presentation & Reporting</div>
+      <div class="skill">Problem Solving</div>
+      <div class="skill">Languages: English, French, Kinyarwanda</div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Academic Projects</h2>
+    <div class="project-card">
+      <h3>Lost and Found Management System</h3>
+      <p>Developed a system using Java and MySQL to manage lost and found items efficiently.</p>
+    </div>
+    <div class="project-card">
+      <h3>BRIGHTON Drive</h3>
+      <p>Designed and implemented a full website using HTML, CSS, JavaScript, PHP, and MySQL.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><strong>Phone:</strong> +250-789-205-906</p>
+    <p><strong>Email:</strong> uyisadonatha@gmail.com</p>
+    <p><strong>Address:</strong> Kigali, Gasabo, Rwanda</p>
+  </section>
+
+  <footer>
+    © 2025 Uyisabye Donatha — All Rights Reserved
+  </footer>
+</body>
+</html>
